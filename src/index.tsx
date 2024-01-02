@@ -1,3 +1,4 @@
-export function multiply(a: number, b: number): Promise<number> {
-  return Promise.resolve(a * b);
-}
+import * as React from 'react';
+import { Text } from 'react-native';
+
+export const HelloWorld = () => <Text>Hello world</Text>;

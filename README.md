@@ -10,12 +10,19 @@ npm install pangeling-ui
 
 ## Usage
 
-```js
-import { multiply } from 'pangeling-ui';
+```tsx
+import { HelloWorld } from 'pangeling-ui';
 
 // ...
 
-const result = await multiply(3, 7);
+export default function App() {
+
+  return (
+    <View style={styles.container}>
+      <HelloWorld />
+    </View>
+  );
+}
 ```
 
 ## Contributing
