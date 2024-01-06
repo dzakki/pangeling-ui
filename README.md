@@ -10,7 +10,7 @@ npm install pangeling-ui
 
 ## Usage
 
-[here](https://github.com/dzakki/pangeling-ui/example/src/components)
+[here](https://github.com/dzakki/pangeling-ui/tree/main/example/src/components)
 
 TODO: add documentation usage with storybook
 
