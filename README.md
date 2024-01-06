@@ -10,20 +10,9 @@ npm install pangeling-ui
 
 ## Usage
 
-```tsx
-import { HelloWorld } from 'pangeling-ui';
+[here](https://github.com/dzakki/pangeling-ui/example/src/components)
 
-// ...
-
-export default function App() {
-
-  return (
-    <View style={styles.container}>
-      <HelloWorld />
-    </View>
-  );
-}
-```
+TODO: add documentation usage with storybook
 
 ## Contributing
 

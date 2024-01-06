@@ -70,6 +70,7 @@
     "react": "18.2.0",
     "react-native": "0.72.6",
     "react-native-builder-bob": "^0.20.0",
+    "react-native-svg": "^14.1.0",
     "release-it": "^15.0.0",
     "typescript": "^5.0.2"
   },
@@ -123,6 +124,7 @@
       "prettier"
     ],
     "rules": {
+      "react-native/no-inline-styles": 0,
       "prettier/prettier": [
         "error",
         {
@@ -130,7 +132,8 @@
           "singleQuote": true,
           "tabWidth": 2,
           "trailingComma": "es5",
-          "useTabs": false
+          "useTabs": false,
+          "no-inline-styles": false
         }
       ]
     }
@@ -144,7 +147,8 @@
     "singleQuote": true,
     "tabWidth": 2,
     "trailingComma": "es5",
-    "useTabs": false
+    "useTabs": false,
+    "no-inline-styles": false
   },
   "react-native-builder-bob": {
     "source": "src",
