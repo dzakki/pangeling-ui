@@ -5,7 +5,9 @@ A simple design system maintains brand consistency with predefined design guidel
 ## Installation
 
 ```sh
-npm install pangeling-ui
+npm install pangeling-ui react-native-svg
+# or
+yarn add pangeling-ui react-native-svg
 ```
 
 ## Usage
