@@ -27,7 +27,8 @@ export const Button: React.FC<ButtonProps> = ({
   children = title,
   titleStyle = {},
   titleProps,
-  buttonStyle = {},
+  style = {},
+  buttonStyle = style,
   type = 'default',
   shape = 'round',
   ...rest
@@ -104,7 +105,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <View>
       <TouchableOpacity
-        style={Object.assign(modifiedStyles.button, buttonStyle)}
+        style={[modifiedStyles.button, buttonStyle]}
         onPressIn={() => setIsFocus(true)}
         onPressOut={() => setIsFocus(false)}
         activeOpacity={0.8}
@@ -114,12 +115,7 @@ export const Button: React.FC<ButtonProps> = ({
           <React.Fragment key={index}>
             {typeof child === 'string'
               ? renderNode(Text, child, {
-                  style: Object.assign(
-                    {
-                      ...modifiedStyles.title,
-                    },
-                    titleStyle
-                  ),
+                  style: [modifiedStyles.title, titleStyle],
                   ...titleProps,
                 })
               : child}

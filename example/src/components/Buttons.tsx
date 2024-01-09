@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet } from 'react-native';
-import { Button, Box } from 'pangeling-ui';
+import { Button, Box, colors } from 'pangeling-ui';
 import { BookIcon, BurgerIcon } from './Icons';
 export default function Buttons() {
   return (
@@ -31,6 +31,14 @@ export default function Buttons() {
         <Button type="text">
           <BookIcon />
         </Button>
+      </Box>
+
+      <Box style={[styles.box, { marginBottom: 60 }]}>
+        <Button
+          style={{ backgroundColor: colors.darkGreen }}
+          title="with style"
+          type="primary"
+        />
       </Box>
     </Box>
   );

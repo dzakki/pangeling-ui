@@ -12,6 +12,7 @@ export interface AccordionItemProps {
   title: string;
   description?: string;
   content?: React.ReactNode;
+  footer?: React.ReactNode;
 }
 
 export const AccordionItem: React.FC<AccordionItemProps> = ({
@@ -19,6 +20,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
   description,
   content = '',
   children = content,
+  footer,
 }) => {
   const [active, setActive] = React.useState(false);
 
@@ -45,6 +47,12 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
           ? renderNode(Text, children, {})
           : children}
       </Box>
+
+      {!!footer && (
+        <Box style={styles.footer}>
+          {typeof footer !== 'string' ? renderNode(Text, footer, {}) : footer}
+        </Box>
+      )}
     </Box>
   );
 };
@@ -70,10 +78,12 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   toggleIcon: {
-    // flex: 1,
     paddingTop: 8,
   },
   content: {
     paddingTop: 16,
+  },
+  footer: {
+    marginTop: 10,
   },
 });
